@@ -23,7 +23,7 @@
     <ClInclude Include="Version_test.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test2.12.cpp" />
+    <ClCompile Include="test2.13.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
