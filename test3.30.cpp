@@ -1,11 +1,9 @@
 /**=================================================================================================
- * @file	test3.28.cpp.
+ * @file	test3.30.cpp.
  *
- * Implements the test 3.28 class
- * 练习 3.28: 下列数组中元素的值是什么？
- * string sa[10];
- * int ia[10];
- * int main() {
- * string sa2[10];
- * int ia2[10];}
+ * Implements the test 3.30 class
+ * 练习 3.30: 指出下面代码中的索引错误。
+ * constexpr size_t array_size 10;
+ * int ia[array_size];
+ * for (size t IX = 1; ix <= array_size; ++ix)
  *===============================================================================================**/
