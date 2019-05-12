@@ -2,5 +2,17 @@
  * @file	test2.12.cpp.
  *
  * Implements the test 2.12 class
- * 指出下面的名字中，哪些是非法的
+ * 练习 2.12： 请指出下面的名字中哪些是作法的？
+ * (a)int double = 3.14;  合法
+ * (b)int _;  非法 （ fatal error LNK1169: 找到一个或多个多重定义的符号）
+ * (c)int catch-22; 非法：命名只能使用字母，下划线，数字
+ * (e)double Double = 3.14;  非法，变量不能使用关键字来命名，且变量名正常用小写（ fatal error LNK1169: 找到一个或多个多重定义的符号）
+ * (d)int 1_or_2 = 1; 非法，变量名由字母或下划线开头
  *===============================================================================================**/
+#include<iostream>
+int main() {
+	int _ = 1;
+	//double Double = 3.14;
+	std::cout << _<<std::endl;
+	//std::cout << Double << std::endl;
+}

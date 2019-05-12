@@ -22,27 +22,4 @@
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="test2.23.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test2.24.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test2.25.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test2.26.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test2.27.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test2.28.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test2.29.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
 </Project>

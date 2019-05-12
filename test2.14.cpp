@@ -2,14 +2,15 @@
  * @file	test2.14.cpp.
  *
  * Implements the test 2.14 class
- * 下面程序合法么，如果合法，它将输出什么？
+ * 练习 2.14:下面的程序合法吗？ 如果合法， 它将输出什么？
  * 输出45
  *===============================================================================================**/
 #include<iostream>
 int main() {
 	int i = 100, sum = 0;
-	for (int i = 0; i != 10; ++i) {
+	for (int i = 0; i != 10; ++i) {//i为局部变量,覆盖了之前的i,之前定义的i为无效
 		sum += i;
+		std::cout << i <<" "<< sum << std::endl;
 	}
 	std::cout << sum << std::endl;
 }

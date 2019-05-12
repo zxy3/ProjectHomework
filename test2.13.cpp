@@ -2,14 +2,14 @@
  * @file	test2.13.cpp.
  *
  * Implements the test 2.13 class
- * 下面程序中的j的值是多少？
- * j=10
+ * 练习 2.13： 下面程序中 j 的值是多少?
+ * j=10  此时使用的是局部作用域下的i赋值给的j
  *===============================================================================================**/
 #include<iostream>
 int i = 42;
 int main() {
-	int i = 10;
+	int i = 10;//i覆盖全局作用域下的i
 	int j = i;
 	std::cout << j << std::endl;
-
+	std::cout << ::i << std::endl;//显示全局作用域下的i
 }

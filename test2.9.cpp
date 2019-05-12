@@ -2,6 +2,18 @@
  * @file	test2.9.cpp.
  *
  * Implements the test 2.9 class
- * 解释下列定义的含义，对于非法定义，并说明错在何处，并指出如何修改
+ * 练习2.9：解释下列定义的含义。 对于非法的定义， 请说明错在何处并将其改正。
+ * (a)std::cin >> int input_value; 语句错误
+ * (b) int i = { 3.14 };  3.14是float型，用{}定义时存在丢失的风险，编译不通过。error C2397: 从“double”转换到“int”需要收缩转换
+ * (c)double salary = wage=9999.99; 不可以连续赋值
+ * (d ) int i = 3.14;  可以,但会丢失数据
  * 
  *===============================================================================================**/
+#include <iostream>
+int main() {
+	//std::cin >> int input_value;
+	//int i = { 3.14 };
+	//double salary = wage = 9999.99;
+	int j = 3.14;
+	std::cout << j;
+}

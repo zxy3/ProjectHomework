@@ -2,7 +2,13 @@
  * @file	test2.10.cpp.
  *
  * Implements the test 2.10 class
- * 下列变量的初值分别是什么
+ * 下列变量的初值分别是什么？
+ * std::string global_str;
+ * int global_int;
+ * int main(){
+ *		int local_int;
+ *		std::string local_str;
+ * }
  * int global_int初值为0，其他均无初值,local_int没有初值无法打印
  *===============================================================================================**/
 #include<iostream>
