@@ -4,3 +4,13 @@
  * Implements the test 3.6 class
  * 练习 3.6: 编写一段程序， 使用范围 for 语句将字符串内的所有字符用 X 代替。
  *===============================================================================================**/
+#include<iostream>
+using namespace std;
+int main() {
+	string s("hello world!!");//字符串也可以自己输入
+	cout << s << endl;
+	for (auto& i : s) {
+		i = 'X';//空格字符也会处理成X
+	}
+	cout << s<<endl;
+}

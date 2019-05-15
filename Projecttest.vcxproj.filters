@@ -26,46 +26,34 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test3.1.cpp">
+    <ClCompile Include="test3.11.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test3.2.cpp">
+    <ClCompile Include="test3.12.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test3.3.cpp">
+    <ClCompile Include="test3.13.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test3.4.cpp">
+    <ClCompile Include="test3.14.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test3.5.cpp">
+    <ClCompile Include="test3.15.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test3.6.cpp">
+    <ClCompile Include="test3.16.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test3.7.cpp">
+    <ClCompile Include="test3.17.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test3.8.cpp">
+    <ClCompile Include="test3.18.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test3.9.cpp">
+    <ClCompile Include="test3.19.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test3.10.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test1.9.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test1.10.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test1.11.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test2.41.cpp">
+    <ClCompile Include="test3.20.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

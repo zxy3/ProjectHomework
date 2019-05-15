@@ -3,4 +3,15 @@
  *
  * Implements the test 3.7 class
  * 练习 3.7: 就上一题完成的程序而言， 如果将循环控制变量的类型设为 char 将发生什么？ 先估计一下结果， 然后实际编程进行验证。
+ * 结果暂时看是一样的。
  *===============================================================================================**/
+#include<iostream>
+using namespace std;
+int main() {
+	string s("hello world123!!");//字符串也可以自己输入
+	cout << s << endl;
+	for (char& i : s) {
+		i = 'X';//空格字符也会处理成X
+	}
+	cout << s << endl;
+}
