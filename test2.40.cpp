@@ -10,7 +10,7 @@
 #include <string>
 //这是一个Sales_data对象中包含的元素
 struct Sales_data {
-	std::string bookno;  //书籍编号
+	std::string bookNo;  //书籍编号
 	unsigned units_sold = 0;  //单价
 	double revenue = 0.0;  //数量
 	unsigned units_sold; //总价
