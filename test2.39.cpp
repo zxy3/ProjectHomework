@@ -2,9 +2,6 @@
  * @file	test3.29.cpp.
  *
  * Implements the test 3.29 class
- * struct Foo { / *此处为空*/ }// 注意： 没有分号
- *int main() {
- * return 0
- *
- }
+ * 练习2.39，题目不好粘贴，略去，直接写答案。struct Foo { / *此处为空*/ }// 注意： 没有分号
+ * [Error] expected ';' after struct definition
  *===============================================================================================**/

@@ -3,7 +3,8 @@
  *
  * Implements the test 2.30 class
  * 练习 2.30： 对于下面的这些语句， 请说明对象被声明成了顶层 const 还是底层 const ?
- * const int v2=0;int vl = v2;
+ * const int v2=0;int v1 = v2;  v2是顶层const；
  * int *p1 = &v1, &r1= v1;
- * const int *p2 = &v2, *const p3 = &i, &r2 = v2;
+ * const int *p2 = &v2, *const p3 = &i, &r2 = v2;p2是底层const；p3最左是底层，右侧是顶层const
+ * （顶层const和底层const搞得不是很懂。）
  *===============================================================================================**/
