@@ -2,5 +2,18 @@
  * @file	test3.19.cpp.
  *
  * Implements the test 3.19 class
- * 练习 3.19: 如果想定义一个含有 10 个元素的 vector 对象， 所有元素的值都是 42, 请列举出三种不同的实现方法。 哪种方法更好呢？ 为什么？
+ * 练习 3.19: 如果想定义一个含有 10 个元素的 vector 对象， 所有元素的值都是 42, 请列举出三种不同的实现方法。 哪种方法更好呢？ 为什么？第2种简单。
+ * vector<int> v1(10);  // v1 有 10 个元素， 每个的值都是 0
+ * vector<int> v2{10};  // v2 有1个元素， 该元素的值是 10
+ * vector<int> v3(10, 1);  // v3 有 10 个元素，每个的值都是 1
+ * vector<int> v4{10, 1};  // v4 有 2 个元素，值分别是 10 和 1
  *===============================================================================================**/
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+int main() {
+	vector<int> ivec { 42, 42, 42, 42, 42, 42, 42, 42, 42, 42 };
+	vector<int> ivec1(10, 42);
+	vector<int> ivec2 = ivec1;
+}
