@@ -24,9 +24,20 @@
     <ClInclude Include="Version_test.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test2.40.cpp" />
+    <ClCompile Include="test1.10.cpp" />
+    <ClCompile Include="test1.11.cpp" />
+    <ClCompile Include="test1.9.cpp" />
     <ClCompile Include="test2.41.cpp" />
-    <ClCompile Include="test2.42.cpp" />
+    <ClCompile Include="test3.1.cpp" />
+    <ClCompile Include="test3.10.cpp" />
+    <ClCompile Include="test3.2.cpp" />
+    <ClCompile Include="test3.3.cpp" />
+    <ClCompile Include="test3.4.cpp" />
+    <ClCompile Include="test3.5.cpp" />
+    <ClCompile Include="test3.6.cpp" />
+    <ClCompile Include="test3.7.cpp" />
+    <ClCompile Include="test3.8.cpp" />
+    <ClCompile Include="test3.9.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
