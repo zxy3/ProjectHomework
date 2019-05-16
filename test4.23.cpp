@@ -6,4 +6,16 @@
  * string s = "word";
  * string p1 = s + s[s.size()-1] =='s' ?"":"s";
  * 
+ * 没有与操作数匹配的运算符,加括号，手动修改优先级
  *===============================================================================================**/
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+int main()
+{
+	string s = "word";
+	//string p1 = s + s[s.size() - 1] == 's' ? "" : "s";
+	string pl = s + (s[s.size() - 1] == 's' ? "" : "s");
+	return 0;
+}

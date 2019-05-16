@@ -3,8 +3,8 @@
  *
  * Implements the test 4.30 class
  * 练习 4.30: 根据 4.12 节中的表（ 第 147 页）， 在下述表达式的适当位置加上括号， 使得加上括号之后表达式的含义与原來的含义相同。
- * (a)sizeof x + y
- * (b)sizeof p->mem[i]
- * (c)sizeof a < b
- * (d)sizeof f()
+ * (a)sizeof x + y               (sizeof x) +y
+ * (b)sizeof p->mem[i]     sizeof(p->mem[i])
+ * (c)sizeof a < b               (sizeof a) < b
+ * (d)sizeof f()                    无需改变。
  *===============================================================================================**/
