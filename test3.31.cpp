@@ -4,3 +4,11 @@
  * Implements the test 3.31 class
  * 练习 3.31: 编写一段程序， 定义一个含有 10 个 int 的数组， 令每个元素的值就是其下标值。
  *===============================================================================================**/
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+int main()
+{
+	int a[10] = { 0,1,2,3,4,5,6,7,8,9 };
+}
