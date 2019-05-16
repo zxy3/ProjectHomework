@@ -4,5 +4,17 @@
  * Implements the test 4.13 class
  * 练习 4.13: 在下述语句中， 当赋值完成后 i 和 d 的值分别是多少？
  * int i; double d;
- * (a) d i 3.5; (b) i d = 3.5;
+ * (a) d=i=3.5;     d=3     i=3
+ * (b) i=d=3.5;     d=3.5  i=3
  *===============================================================================================**/
+#include<iostream>
+using namespace std;
+int main() {
+	int i; 
+	double d;
+	d = i = 3.5;
+	cout << d <<" "<< i<<endl;
+	i = d = 3.5;
+	cout << i << " " << d << endl;
+	return 0;
+}

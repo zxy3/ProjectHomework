@@ -4,10 +4,10 @@
  * Implements the test 4.20 class
  * 练习 4.20: 假设 iter 的类型是 vector<string>::iterator， 说明下面的表达式是否合法。 
  * 如果合法， 表达式的含义是什么？ 如果不合法， 错在何处？
- * (a)*iter++;
- * (b)(*iter)++;
- * (c)*iter.empty()
- * (d)iter->empty();
- * (e) ++*iter;
- * (f)iter++->empty();
+ * (a)*iter++;   合法：先对iter加1，再返回iter指向的值
+ * (b)(*iter)++;   不合法：返回iter指向的值为string ++操作无意义
+ * (c)*iter.empty()  不合法：iter是一个指针，没有empty()的成员
+ * (d)iter->empty();  合法：判断iter所指向的值是否为空
+ * (e) ++*iter;  不合法：*iter可以得到iter所指的字符串，但是字符串并没有++操作。
+ * (f)iter++->empty();  首先判断iter所指向的值是否为空，再对iter加1
  *===============================================================================================**/

@@ -4,7 +4,7 @@
  * Implements the test 4.19 class
  * 练习 4.19： 假设 ptr 的类型是指向 int 的指针、vec 的类型是 vector<int>、 ival的类型是 int， 说明下面的表达式是何含义？ 
  * 如果有表达式不正确， 为什么？ 应该如何修改？
- * (a) ptr != 0 && *ptr++
- * (b)ival++ && ival
- * (c) vec[ival++] <= vec[ival]
+ * (a) ptr != 0 && *ptr++    (*ptr != 0) && (*ptr++)  判断ptr指针指向的int值是否为0
+ * (b)ival++ && ival     判断ival和ival+1两个值是否都非0
+ * (c) vec[ival++] <= vec[ival]  v       ec[ival] <= vec[ival+1]
  *===============================================================================================**/

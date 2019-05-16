@@ -3,6 +3,11 @@
  *
  * Implements the test 4.15 class
  * 练习 4.15: 下面的赋值是非法的， 为什么？ 应该如何修改？
- * double dval; int ival; int *pi;
- * dval = ival = pi 0;
+ * double dval;    //定义一个double类型的变量，名为dval，未初始化
+ * int ival;   //定义一个int类型的变量，名为ival，未初始化
+ * int *pi;   //定义一个Int类型的指针变量，名为pi，未初始化
+ * dval = ival = pi = 0;//非法，不可以直接把数值赋值指针变量
+ * 修改：
+ * dval = ival =0；
+ * pi = &dval;
  *===============================================================================================**/
