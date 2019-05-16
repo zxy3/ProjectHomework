@@ -4,3 +4,12 @@
  * Implements the test 4.10 class
  * 练习 4.10: 为 while 循环写一个条件， 使其从标准输入中读取整数， 遇到 42 时停止。
  *===============================================================================================**/
+#include<iostream>
+using namespace std;
+int main() {
+	int a;
+	cout << "输入整数，遇到42则停止" << endl;
+	while (( cin >> a) && a !=42) {
+		cout << a << " " << "请继续输入" << endl;
+	}
+}
