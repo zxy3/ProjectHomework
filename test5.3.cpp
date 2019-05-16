@@ -4,4 +4,24 @@
  * Implements the test 5.3 class
  * 练习 5.3: 使用逗号运算符（ 参见 4.10 节， 第 140 页） 重写 1.4.1 节（ 第 10 页） 的 while循环， 使它不再需要块， 
  * 观察改写之后的代码的可读性提高了还是降低了。
+ * 
  *===============================================================================================**/
+#include <iostream>
+using namespace std;
+int main() {
+	int sum = 0, val = 1;
+	 //只要 val 的值小于等于 10， while 循环就会持续执行
+	//while 实现方法
+	while (val <= 10) {
+		sum += val; // 将 sum + val 賦予
+		++val; // 将 val 加 1
+		cout << "Sum of 1 to 10 inclusive is" << " " << sum << std::endl;
+	}
+	//要求使用逗号运算符，且不在使用块，也就是一句话写完
+	// 实际上对逗号运算符不是很懂
+	for (int i = 1, sum = 0; i!=11; ++i)
+		cout <<i<<" "<< (sum+=i)<<endl;
+
+	return 0;
+}
+

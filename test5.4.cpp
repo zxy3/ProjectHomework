@@ -3,7 +3,7 @@
  *
  * Implements the test 5.4 class
  * 练习 5.4: 说明下列例子的含义， 如果存在问题， 试着修改它。
- * (a)while (string::iterator iter != s.end()) { / ... / }
- * (b)while (bool status = find(word)) { /.../ }
- *     if (!status) { / … * / }
+ * (a)while (string::iterator iter != s.end()) { /... / }    //s.end()不知道是啥，也没定义
+ * (b)while (bool status = find(word)) { /... / }    //find这个函数的返回值要是bool类型才可以
+ *     if (!status) { / …  / }
  *===============================================================================================**/
