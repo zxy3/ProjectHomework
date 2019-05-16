@@ -25,15 +25,4 @@
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="test3.18.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test3.20.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test3.16.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
 </Project>
