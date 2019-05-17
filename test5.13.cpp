@@ -9,7 +9,7 @@
  * case ' a': aCnt++;
  * case  'e': eCnt++；
  * default: iouCnt++;}
- * 缺少break;
+ * 错误：case内部缺少break语句;
  * (b)unsigned index =some value();
  * switch (index) {
  * case 1:
@@ -20,7 +20,7 @@
  * ix = ivec.size()-1;
  * ivec[ ix ] = i n d e x;
  * }
- * ix应在外部声明定义
+ * 错误：case内部定义要加花括号
  * (c)unsigned evenCnt = 0, oddCnt=0;
  * int digit = get_num() % 10;
  * switch (digit) {
@@ -30,7 +30,7 @@
  * case 2, 4, 6, 8, 10:
  * evencnt++;
  * break;
- * 不能用逗号加以表示包括case 1 ： case 2： case : 3....
+ * 错误：多条case进行同一处理错误，正确格式：case 1 ： case 2： case : 3：{处理语句}
  * (d)unsigned ival=512, jval=1024, kval=4096;
  * unsigned bufsize;
  * unsigned swt = get_bufCnt( > ;switch(swt) {
@@ -43,5 +43,6 @@
  * case  kval:
  * bufsize = kval * sizeof(int);
  * break;}
- * case 后面需要加的是字面值常量，可以加const修饰符，将ival、jval、kval变成”常量“
+ * 错误：case 标签必须是整形常量表达式
+ * unsigned ival=512, jval=1024, kval=4096;unsigned bufsize;的定义均为变量，不能用于case标签。
  *===============================================================================================**/
