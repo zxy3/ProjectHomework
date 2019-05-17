@@ -14,19 +14,28 @@
 using namespace std;
 int main()
 {
-	int a[5] = { 0,1,2,3,4 };
-	int b[6] = { 0,1,2,3,4,5 };//也可以写成用户自己输入
-	vector<int> My_vec1(a, a + 5);//借助数组初始化vector对象
-	vector<int> My_vec2(b, b + 6);//因为用的VS2010所以不支持列表初始化，用的是构造函数的初始化方法
-	int small_size = My_vec1.size() > My_vec2.size() ? My_vec2.size() : My_vec1.size();//挑出较小者
-	for (int i = 0; i <= small_size; i++)
+	vector<int> vec1;//也可以自己输
+	vector<int> vec2;
+	int i,j;
+	cout << "输入第一个字符串:" << " " << endl;
+	while (cin>>j) {
+		vec1.push_back(j);
+	}
+	cout << "输入第二个字符串:" << " " << endl;
+	while (cin >>i ) {
+		vec2.push_back(i);
+	}
+	int small_size = vec1.size() > vec2.size() ? vec2.size() : vec1.size();//只需挑出长度较短的那个
+	cout << "较小字符串长度为：" << " " << small_size << endl;
+	cout << "是否相等；" << " ";
+	for (int i = 0; i != small_size; i++)
 	{
-		if (My_vec1[i] != My_vec2[i])
+		if (vec1[i] != vec2[i])
 		{
 			cout << "False" << endl;
-			return 0;//如有不匹配的元素即输出False结束
+			return -1;
 		}
 	}
 	cout << "True" << endl;
-	return 0;//如果用void main(),可以用一个flag来表示是否每个元素都相等
+	return 0;
 }
