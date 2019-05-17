@@ -3,57 +3,55 @@
  *
  * Implements the test 5.11 class
  * 练习 5.11: 修改统计元音字母的程序， 使其也能统计空格 、 制表符和换行符的数量。
- * 如何结束输入？
  *===============================================================================================**/
-#include <iostream>
-#include <string>
-#include <vector>
+#include<iostream>
+#include<string>
+#include<vector>
+#include<cstring>
 using namespace std;
-void main()
+
+int main()
 {
-	char cval;
-	int char_a = 0, char_e = 0, char_i = 0, char_o = 0, char_u = 0, sum_space = 0, sum_table = 0, sum_newline = 0;
-	while (cin >> std::noskipws >> cval) // 此处的std::noskipws表示的是不忽略任何地方的空白（包括制表符和空格等）
-	{
-		switch (cval)
-		{
-		case 'a':
-		case 'A':
-			++char_a;
+	unsigned aCnt = 0, eCnt = 0, iCnt = 0, oCnt = 0, uCnt = 0, nCnt=0, tCnt = 0, spaceCnt = 0;
+
+	char ch;
+	while (cin >> std::noskipws >> ch) {//不忽略任何符号
+		switch (ch) {
+		case 'a':case'A'://不能写成case ’a‘||'A'
+
+			++aCnt;
 			break;
-		case 'e':
-		case 'E':
-			++char_e;
+		case 'e':case 'E':
+			++eCnt;
 			break;
-		case 'i':
-		case 'I':
-			++char_i;
+		case 'i':case'I':
+			++iCnt;
 			break;
-		case 'o':
-		case 'O':
-			++char_o;
+		case 'o':case'O':
+			++oCnt;
 			break;
-		case 'u':
-		case 'U':
-			++char_u;
+		case 'u':case'U':
+			++uCnt;
 			break;
-		case ' '://空格
-			++sum_space;
+		case '\n':
+			++nCnt;
 			break;
-		case '\t'://横向制表符
-			++sum_table;
+		case '\t':
+			++tCnt;
 			break;
-		case '\n'://换行符
-			++sum_newline;
+		case ' ':
+			++spaceCnt;
 			break;
 		}
 	}
-	cout << "元音字母a的个数为：" << char_a << endl;
-	cout << "元音字母e的个数为：" << char_e << endl;
-	cout << "元音字母i的个数为：" << char_i << endl;
-	cout << "元音字母o的个数为：" << char_o << endl;
-	cout << "元音字母u的个数为：" << char_u << endl;
-	cout << "空格的个数为：" << sum_space << endl;
-	cout << "制表符的个数为：" << sum_table << endl;
-	cout << "换行符的个数为：" << sum_newline << endl;
+	cout << "Number of vowel a: \t" << aCnt << '\n'
+		<< "Number of vowel e: \t" << eCnt << '\n'
+		<< "Number of vowel i: \t" << iCnt << '\n'
+		<< "Number of vowel o: \t" << oCnt << '\n'
+		<< "Number of vowel u: \t" << uCnt << '\n'
+		<< "Number of vowel space: \t" << spaceCnt << '\n'
+		<< "Number of vowel 换行: \t" << nCnt << '\n'
+		<< "Number of vowel 制表符\t" << tCnt << endl;
+
+	return 0;
 }

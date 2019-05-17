@@ -4,78 +4,78 @@
  * Implements the test 5.12 class
  * 练习 5.12： 修改统计元音字母的程序， 使其能统计以下含有两个字符的字符序列的数量:ff 、 fl 和 fi。
  *===============================================================================================**/
-#include <iostream>
-#include <string>
-#include <vector>
+#include<iostream>
+#include<string>
+#include<vector>
+#include<cstring>
 using namespace std;
-void main()
+
+int main()
 {
-	char cval, char_before = '\0'; //计算机中的0值表示的为'\0',可防止它的初始值(随机的)碰巧是某个字符的值.
-	int char_a = 0, char_e = 0, char_i = 0, char_o = 0, char_u = 0, 
-		sum_space = 0, sum_table = 0, sum_newline = 0,
-		sum_ff = 0, sum_fl = 0, sum_fi = 0;//添加ff,fl,fi
-	while (cin >> std::noskipws >> cval) // 此处的std::noskipws表示的是不忽略任何地方的空白（包括制表符和空格等）
-	{
-		switch (cval)
-		{
-		case 'a':
-		case 'A':
-			++char_a;
+	unsigned aCnt = 0, eCnt = 0, iCnt = 0, oCnt = 0, uCnt = 0, nCnt = 0, tCnt = 0, spaceCnt = 0,temp = 0,flCnt = 0,fiCnt = 0, ffCnt = 0;
+
+	char ch;
+	cout << "请开始你的输入:(字符串,空格,回车,制表符,ff,fi,fI)" << endl;
+	while (cin >> std::noskipws >> ch) {//不忽略任何符号
+		switch (ch) {
+		case 'a':case'A'://不能写成case ’a‘||'A'
+
+			++aCnt;
 			break;
-		case 'e':
-		case 'E':
-			++char_e;
+		case 'e':case 'E':
+			++eCnt;
 			break;
 		case 'i':
-			if (char_before == 'f')
-			{
-				++sum_fi;
+			if (temp == 'f') {
+				++fiCnt;
 			}
-		case 'I':
-			++char_i;
+			else {
+				++iCnt;
+			}
 			break;
-		case 'o':
-		case 'O':
-			++char_o;
+		case'I':
+			if (temp == 'f') {
+				++flCnt;
+			}
+			else {
+				++iCnt;
+			}
 			break;
-		case 'u':
-		case 'U':
-			++char_u;
+		case 'o':case'O':
+			++oCnt;
 			break;
-		case ' ':
-			++sum_space;
-			break;
-		case '\t':
-			++sum_table;
+		case 'u':case'U':
+			++uCnt;
 			break;
 		case '\n':
-			++sum_newline;
+			++nCnt;
 			break;
-		case 'f':
-			if (char_before == 'f')
-			{
-				++sum_ff;
-			}
+		case '\t':
+			++tCnt;
 			break;
-		case 'l':
-			if (char_before == 'f')
-			{
-				++sum_fl;
+		case ' ':
+			++spaceCnt;
+			break;
+		case'f':
+			if (temp == 'f') {//连续的3个f会被记录2次
+				++ffCnt;
 			}
 			break;
 		}
-		char_before = cval;//将当前的字符赋给char_before，作为下次判断的依据
-		//如果下次判断中char_before为f字符，那么只要再判断当前字符是否为f、l、i即可
+		temp = ch;
 	}
-	cout << "元音字母a的个数为：" << char_a << endl;
-	cout << "元音字母e的个数为：" << char_e << endl;
-	cout << "元音字母i的个数为：" << char_i << endl;
-	cout << "元音字母o的个数为：" << char_o << endl;
-	cout << "元音字母u的个数为：" << char_u << endl;
-	cout << "空格的个数为：" << sum_space << endl;
-	cout << "制表符的个数为：" << sum_table << endl;
-	cout << "换行符的个数为：" << sum_newline << endl;
-	cout << "字符序列ff的个数为：" << sum_ff << endl;
-	cout << "字符序列fl的个数为：" << sum_fl << endl;
-	cout << "字符序列fi的个数为：" << sum_fi << endl;
+	cout << "Number of vowel a: \t" << aCnt << '\n'
+		<< "Number of vowel e: \t" << eCnt << '\n'
+		<< "Number of vowel i: \t" << iCnt << '\n'
+		<< "Number of vowel o: \t" << oCnt << '\n'
+		<< "Number of vowel u: \t" << uCnt << '\n'
+		<< "Number of vowel space: \t" << spaceCnt << '\n'
+		<< "Number of vowel 换行: \t" << nCnt << '\n'
+		<< "Number of vowel 制表符\t" << tCnt << '\n'
+		<< "Number of vowel ff\t" << ffCnt << '\n'
+		<< "Number of vowel fi\t" << fiCnt << '\n'
+		<< "Number of vowel fI\t" << flCnt << endl;
+
+
+	return 0;
 }
