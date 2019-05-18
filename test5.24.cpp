@@ -11,9 +11,15 @@ using namespace std;
 int main() {
 	int num1, num2;
 	cout << "请输入2个数字" << endl;
-	cin >> num1 >> num2;
-	if (num2 == 0) {
-		cout << "被除数不能为0" << endl;
+	cin >> num1 ;
+	try {
+		cin >> num2;
+		if (num2 == 0) {
+			throw runtime_error("输入错误：除数不能为0。");
+		}
+	}
+	catch (runtime_error err) {
+		cout << err.what();
 	}
 	cout << num1 << "/" << num2 << "=" << num1 / num2 << endl;
 }

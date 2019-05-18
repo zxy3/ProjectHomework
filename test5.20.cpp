@@ -10,19 +10,20 @@
 #include <string>
 #include <vector>
 using namespace std;
-void main()
+int main()
 {
-	string My_string1, My_string2;
-	do
-	{
-		cout << "请输入字符串" << endl;
-		cin >> My_string1;
-		if (My_string1 == My_string2)//出现连续相同的情况，则输出，退出循环
-		{
-			cout << My_string1<<"重复2次" << endl;
+	string string1, temp;
+	cout << "请输入2个字符串:" << endl;
+	cin >> string1;
+	while (cin >> temp) {
+		if (string1 == temp) {
+			cout << "重复出现2次的字符串是:" <<" "<< string1 << endl;
 			break;
 		}
-		else
-			My_string2 = My_string1;
-	} while (cin);
+		else {
+			cout << "2个字符串不相等，请继续输入1个字符串，与上一个字符串对比：" << endl;
+			string1 = temp;
+		}
+	}
+	return 0;
 }

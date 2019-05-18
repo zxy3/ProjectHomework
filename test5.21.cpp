@@ -8,34 +8,58 @@
 #include <string>    
 #include <vector>    
 using namespace std;
-void main()
+int main()
 {
-
-	string My_string1, My_string2;
-	int flag = 0;//记录是否有重复单词出现  
-	cout << "请输入单词："<<" ";
-	while (cin >> My_string1)
-	{
-
-		if (My_string1[0] > 'Z' || My_string1[0] < 'A')//字符串的第一个字母
-		{
-			My_string2 = My_string1;
-			cout << "请继续输入单词：";  
-			continue;
-		}
-		if (My_string1 == My_string2)
-		{
-			cout << My_string1 <<"重复2次"<< endl;
-			flag = 1;
+	string string1, temp;
+	cout << "请输入2个字符串:" << endl;
+	cin >> string1;
+	while (cin >> temp) {
+		if (string1 == temp &&(string1[0]>='Z'|| string1[0] <= 'A')) {//为什么不能写成string1[0]>='Z'&& string1[0] <= 'A'
+			cout << "重复出现2次的字符串且首字符大写的是:" << " " << string1 << endl;
 			break;
 		}
-		else
-			My_string2 = My_string1;
-		cout << "请继续输入单词：";
+		else {
+			cout << "2个字符串不相等，请继续输入1个字符串，与上一个字符串对比：" << endl;
+			string1 = temp;
+		}
 	}
-	if (flag == 0)
-	{
-		cout << "无重复单词出现" << endl;
-	}
-	system("pause");
+	return 0;
 }
+
+
+//continue版本
+// #include <iostream>
+// #include <string>
+// #include <vector>
+// using namespace std;
+// int main()
+// {
+//	string string1, temp;
+//	cout << "请输入2个字符串:" << endl;
+//	while (cin >> string1) {
+//		if (string1[0] > 'Z' || string1[0] < 'A') {
+//			cout << "首字母非大写" << endl;
+//			continue;
+//		}
+//		else {
+//			break;
+//		}
+//	}
+//	while (cin >> temp) {
+//		if (temp[0] > 'Z' || temp[0] < 'A') {
+//			cout << "首字母非大写" << endl;
+//			continue;
+//		}
+//		else {
+//			if (string1 == temp) {//为什么不能写成string1[0]>='Z'&& string1[0] <= 'A'
+//				cout << "重复出现2次的字符串且首字符大写的是:" << " " << string1 << endl;
+//				break;
+//			}
+//			else {
+//				cout << "2个字符串不相等，请继续输入1个字符串，与上一个字符串对比：" << endl;
+//				string1 = temp;
+//			}
+//		}
+//	}
+//	return 0;
+// }
