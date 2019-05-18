@@ -10,20 +10,24 @@
 #include <string>
 #include <vector>
 using namespace std;
-void main()
+int  main()
 {
+	string string1, temp;
+	string tips;
 	do
 	{
-		string My_string1, My_string2;
 		cout << "请输入两个字符串" << endl;
-		cin >> My_string1 >> My_string2;
-		if (My_string1.size() > My_string2.size())
+		cin >> string1 >> temp;
+		if (string1.size() > temp.size())
 		{
-			cout << My_string2 << endl;
+			cout << "较短的是：" << " " << temp << endl;
 		}
-		else
-		{
-			cout << My_string1 << endl;
+		else {
+			cout << "较短的是：" << " " << string1 << endl;
 		}
-	} while (cin);//实际上这个循环会一直执行下去
+		cout << "是否要继续下去: yes or no" << endl;
+		cin >> tips;
+	} while ( !tips.empty() && tips[0]!='n');//实际上这个循环会一直执行下去
+
+	return 0;
 }
