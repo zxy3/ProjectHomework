@@ -12,6 +12,7 @@ using namespace std;
 int getAbsolutevalue(int i) {//形参
 	int index = i;//局部变量
 	//局部静态变量
+	static int j = index;
 	if (index < 0) {
 		return -index;
 	}
