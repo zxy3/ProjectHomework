@@ -25,13 +25,6 @@
     <ClInclude Include="Sales_item.h" />
     <ClInclude Include="Version_test.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="test6.16.cpp" />
-    <ClCompile Include="test6.17.cpp" />
-    <ClCompile Include="test6.18.cpp" />
-    <ClCompile Include="test6.19.cpp" />
-    <ClCompile Include="test6.20.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{65A4DCDB-EF2A-44E7-B9B4-AC2A9B65336D}</ProjectGuid>

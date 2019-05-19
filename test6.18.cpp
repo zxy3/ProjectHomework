@@ -7,4 +7,7 @@
  * (b) 名为 change_val 的函数， 返回 vector<int>的迭代器， 有两个参数： 一个是
  * compare
  * int， 另一个是 vector<int>的迭代器。
+ *  
+ * 1、bool compare(matrix &m1, matrix &m2){ /.../ }
+ * 2、vector<int>::iterator change_val(int, vector<int>::iterator) { /.../ }
  *===============================================================================================**/

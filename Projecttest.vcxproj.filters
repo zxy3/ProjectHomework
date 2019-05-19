@@ -31,21 +31,4 @@
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="test6.16.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test6.17.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test6.18.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test6.19.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test6.20.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
 </Project>
