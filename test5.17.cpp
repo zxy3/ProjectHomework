@@ -14,23 +14,18 @@
 using namespace std;
 int main()
 {
-	vector<int> vec1;//也可以自己输
-	vector<int> vec2;
-	int i,j;
-	cout << "输入第一个字符串:" << " " << endl;
-	while (cin>>j) {
-		vec1.push_back(j);
-	}
-	cout << "输入第二个字符串:" << " " << endl;
-	while (cin >>i ) {
-		vec2.push_back(i);
-	}
-	int small_size = vec1.size() > vec2.size() ? vec2.size() : vec1.size();//只需挑出长度较短的那个
+	string line1, line2;
+	getline(cin, line1);
+	cout << "第一个字符串是:" << " " << line1 << endl;
+	getline(cin, line2);
+	cout << "第一个字符串是:" << " " << line2 << endl;
+	
+	string::size_type small_size = line1.size() > line2.size() ? line2.size() : line1.size();//只需挑出长度较短的那个
 	cout << "较小字符串长度为：" << " " << small_size << endl;
-	cout << "是否相等；" << " ";
+	cout << "是否相等：" << " ";
 	for (int i = 0; i != small_size; i++)
 	{
-		if (vec1[i] != vec2[i])
+		if (line1[i] != line2[i])
 		{
 			cout << "False" << endl;
 			return -1;

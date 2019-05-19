@@ -26,11 +26,6 @@
     <ClInclude Include="Version_test.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test6.11.cpp" />
-    <ClCompile Include="test6.12.cpp" />
-    <ClCompile Include="test6.13.cpp" />
-    <ClCompile Include="test6.14.cpp" />
-    <ClCompile Include="test6.15.cpp" />
     <ClCompile Include="test6.16.cpp" />
     <ClCompile Include="test6.17.cpp" />
     <ClCompile Include="test6.18.cpp" />
