@@ -31,4 +31,30 @@
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test6.23.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test6.24.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test6.25.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test6.26.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test6.27.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test6.28.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test6.29.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test6.30.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
