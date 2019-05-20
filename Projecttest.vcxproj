@@ -26,14 +26,16 @@
     <ClInclude Include="Version_test.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test6.23.cpp" />
-    <ClCompile Include="test6.24.cpp" />
-    <ClCompile Include="test6.25.cpp" />
-    <ClCompile Include="test6.26.cpp" />
-    <ClCompile Include="test6.27.cpp" />
-    <ClCompile Include="test6.28.cpp" />
-    <ClCompile Include="test6.29.cpp" />
-    <ClCompile Include="test6.30.cpp" />
+    <ClCompile Include="test6.31.cpp" />
+    <ClCompile Include="test6.32.cpp" />
+    <ClCompile Include="test6.33.cpp" />
+    <ClCompile Include="test6.34.cpp" />
+    <ClCompile Include="test6.35.cpp" />
+    <ClCompile Include="test6.36.cpp" />
+    <ClCompile Include="test6.37.cpp" />
+    <ClCompile Include="test6.38.cpp" />
+    <ClCompile Include="test6.39.cpp" />
+    <ClCompile Include="test6.40.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

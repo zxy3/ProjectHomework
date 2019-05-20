@@ -32,28 +32,34 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test6.23.cpp">
+    <ClCompile Include="test6.31.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test6.24.cpp">
+    <ClCompile Include="test6.32.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test6.25.cpp">
+    <ClCompile Include="test6.33.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test6.26.cpp">
+    <ClCompile Include="test6.34.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test6.27.cpp">
+    <ClCompile Include="test6.35.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test6.28.cpp">
+    <ClCompile Include="test6.36.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test6.29.cpp">
+    <ClCompile Include="test6.37.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test6.30.cpp">
+    <ClCompile Include="test6.38.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test6.39.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test6.40.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
