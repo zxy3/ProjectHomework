@@ -8,14 +8,13 @@
 #include <string>
 using namespace std;
 
-int main(int argc, char** argv)//实参列表
+int main(int argc, char** argv)
 {
 	string str;
 	for (int i = 1; i != argc; ++i) {
-		str += argv[i];
+		str += argv[i];//实参内容连接成一个字符串
 		str += " ";
 	}
-
 	cout << str << endl;
 	return 0;
 }

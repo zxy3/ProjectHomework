@@ -6,25 +6,27 @@
  *===============================================================================================**/
 #include<iostream>
 #include<string>
-#include<vector>
-#include<initializer>
 using namespace std;
-int he(initializer_list<int> i)
+int summation(initializer_list<int> i)//依次传入i,形成一个i列表
 {
-	int n = 0;
+	int sumForList = 0;
 	for (auto beg = i.begin(); beg != i.end(); ++beg)
 	{
-
-		n += (*beg);
+		sumForList += (*beg);
 	}
-	return n;
+	return sumForList;
 }
 int main()
 {
-	initializer_list<int>lst{ 1,2,3,4 };
-	int sum = he(lst);
-	cout& lt; &lt; "The sum is:   "& lt; &lt; sum& lt; &lt; endl;
-	cin.get();
+	initializer_list<int>lst{ 1,2,3,4 };//也可以用户自己输入
+	int sum = summation(lst);
+	cout << "输入序列为：" << " ";
+	for (auto beg = lst.begin(); beg != lst.end(); ++beg)
+	{
+		cout << *beg << " ";
+	}
+	cout << endl;
+	cout<< "序列和为:   "<<sum<< endl;
 	cin.get();
 	return 0;
 }
