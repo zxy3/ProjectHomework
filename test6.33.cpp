@@ -9,19 +9,18 @@
 #include<vector>
 using namespace std;
 
-void Get_val(vector<int> a, int ix)//函数的声明及定义，接受两个参数
+void print(vector<int> vlnt, unsigned index)
 {
-	if (ix != -1)
-	{
-		cout << a[ix] << endl;
-		ix--;
-		Get_val(a, ix);//递归
+	unsigned sz = vlnt.size();
+	if (!vlnt .empty() && index < sz) {
+		cout << vlnt[index] << endl;
+		print(vlnt, index + 1);
 	}
 }
 int main(int argc, char* argv[])
 {
 	int a[10] = { 2,2,3,6,5,4,7,8,55,5 };
 	vector<int> Example(a, a + 10);
-	Get_val(Example, Example.size() - 1);//注意下标从0开始
-	return 0;//代表执行成功
+	print(Example, Example.size() - 1);
+	return 0;
 }
