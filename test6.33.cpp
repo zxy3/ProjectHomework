@@ -12,15 +12,23 @@ using namespace std;
 void print(vector<int> vlnt, unsigned index)
 {
 	unsigned sz = vlnt.size();
-	if (!vlnt .empty() && index < sz) {
-		cout << vlnt[index] << endl;
-		print(vlnt, index + 1);
+	if (!vlnt.empty() && index < sz) {//否则：跳出递归的条件
+		cout << vlnt[index] << " ";
+		print(vlnt, index+1);
 	}
 }
 int main(int argc, char* argv[])
 {
-	int a[10] = { 2,2,3,6,5,4,7,8,55,5 };
-	vector<int> Example(a, a + 10);
-	print(Example, Example.size() - 1);
+	vector<int> Example{ 2,2,3,6,5,4,7,8,55,5 };
+	cout << "原序列:" << endl;
+	auto a = Example.begin();
+	auto b = Example.end();
+	while (a != b) {
+		cout << *a << " ";
+		++a;
+	}
+	cout << endl;
+	cout << "递归输出后:" << endl;
+	print(Example, 0);
 	return 0;
 }
