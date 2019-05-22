@@ -28,6 +28,18 @@
   <ItemGroup>
     <Text Include="学习心得.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test7.1.cpp" />
+    <ClCompile Include="test7.10.cpp" />
+    <ClCompile Include="test7.2.cpp" />
+    <ClCompile Include="test7.3.cpp" />
+    <ClCompile Include="test7.4.cpp" />
+    <ClCompile Include="test7.5.cpp" />
+    <ClCompile Include="test7.6.cpp" />
+    <ClCompile Include="test7.7.cpp" />
+    <ClCompile Include="test7.8.cpp" />
+    <ClCompile Include="test7.9.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{65A4DCDB-EF2A-44E7-B9B4-AC2A9B65336D}</ProjectGuid>
