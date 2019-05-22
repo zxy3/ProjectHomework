@@ -3,13 +3,47 @@
 #include <iostream>
 #include <string>
 using namespace std;
-//struct Sales_data {
-//	std::string bookNo;  //书籍编号
-//	unsigned units_sold = 0;  //数量
-//	double revenue = 0.0;
-//	unsigned units_sold; //总价
-//	double revenue;
-//};
+struct Sales_data {
+	//chapter7新成员
+	string isbn() const {  //isbn()函数定义在了类内部  const的作用是：修改隐式 this 指针的类型，表示this是一个指向和常量的指针
+		return bookNo;//用于返回Sales_data 对象的 bookNo 数据成员
+	}
+	Sales_data& combine(const Sales_data&);//combine 和avg_price()函数定义在了类外部
+	double avg_price() const;
+	//chapter2成员
+	std::string bookNo;  //书籍编号
+	unsigned units_sold = 0;  //数量
+	double revenue = 0.0;
+	unsigned units_sold; //总价
+	double revenue;
+};
+//Sales_data 的非成员接口函数
+Sales_data add(const Sales_data& lhs, const Sales_data& rhs) {
+	Sales_data sum = lhs;
+	sum.combine(rhs);
+	return sum;
+}
+// 输入的交易信息包括 ISBN 、 售出总数和售出价格
+//print 函数则负责将给定对象的内容打印到给定的流中
+ostream& Sprint(ostream& os, const Sales_data& item) {
+	os << item.isbn() << " " << item.units_sold << " " << item.revenue << " " << item.avg_price();
+	return os;
+}
+//read 函数从给定流中将数据读到给定的对象里
+istream& read(istream& is, Sales_data& item) {
+	double price = 0;
+		is >> item.bookNo >> item.units_sold >> price;
+		item.revenue = price* item.units_sold;
+		return is;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -54,64 +88,3 @@ using namespace std;
 //}
 //else {
 //	cerr << "No data ? !"<<endl；
-//}
-
-#ifndef SALES_DATA_H
-#define SALES_DATA_H
-
-#include "Version_test.h"
-
-#include <string>
-#include <iostream>
-
-class Sales_data {
-	friend Sales_data add(const Sales_data&, const Sales_data&);
-	friend std::ostream& print(std::ostream&, const Sales_data&);
-	friend std::istream& read(std::istream&, Sales_data&);
-public:
-// constructors
-// using the synthesized version is safe only
-// if we can also use in-class initializers
-#if defined(IN_CLASS_INITS) && defined(DEFAULT_FCNS)
-	Sales_data() = default;
-#else
-	Sales_data() : units_sold(0), revenue(0.0) { }
-#endif
-#ifdef IN_CLASS_INITS
-	Sales_data(const std::string& s) : bookNo(s) { }
-#else
-	Sales_data(const std::string& s) :
-		bookNo(s), units_sold(0), revenue(0.0) { }
-#endif
-	Sales_data(const std::string& s, unsigned n, double p) :
-		bookNo(s), units_sold(n), revenue(p* n) { }
-	Sales_data(std::istream&);
-
-	// operations on Sales_data objects
-	std::string isbn() const { return bookNo; }
-	Sales_data& combine(const Sales_data&);
-	double avg_price() const;
-private:
-	std::string bookNo;
-#ifdef IN_CLASS_INITS   // using the synthesized version is safe only
-	unsigned units_sold = 0;
-	double revenue = 0.0;
-#else
-	unsigned units_sold;
-	double revenue;
-#endif
-};
-
-
-// nonmember Sales_data interface functions
-Sales_data add(const Sales_data&, const Sales_data&);
-std::ostream& print(std::ostream&, const Sales_data&);
-std::istream& read(std::istream&, Sales_data&);
-
-// used in future chapters
-inline
-bool compareIsbn(const Sales_data& lhs, const Sales_data& rhs)
-{
-	return lhs.isbn() < rhs.isbn();
-}
-#endif
