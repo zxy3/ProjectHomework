@@ -40,6 +40,10 @@
     <ClCompile Include="test7.8.cpp" />
     <ClCompile Include="test7.9.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\Desktop\刷题记录--PAT.png" />
+    <Image Include="..\..\..\Desktop\简历.jpg" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{65A4DCDB-EF2A-44E7-B9B4-AC2A9B65336D}</ProjectGuid>
