@@ -12,9 +12,9 @@ using namespace std;
 
 class Person {
 private:
-	string strName; //姓 名
-	string strAddress; // 地 址
+	string strName; //姓名
+	string strAddress; // 地址
 public:		
-	string getName() const { return strName; } // 返 回 姓 名
-	string getAddress() const { return strAddress; } // 返 回 地 址
+	string getName() const { return strName; } // 返回姓名
+	string getAddress() const { return strAddress; } // 返回地址
 };
