@@ -14,17 +14,6 @@
 #include<vector>
 #include"Sales_data.h"
 using namespace std;
-//struct Sales_data {
-//	Sales_data();
-//	string bookNo;
-//	unsigned units_sold;
-//	double revenue;
-//};
-//Sales_data::Sales_data()
-//{
-//	units_sold = 0;
-//	revenue = 0.0;
-//}
 
 int main(int argc, char** argv)
 {
@@ -32,11 +21,7 @@ int main(int argc, char** argv)
 	//分别是 bookNo ( 书籍编号）、 units_sold	(销售量）、revenue(销售收入）、trans（销售记录）
 	cout<<"请输入交易记录( ISBN、销售量、销售收入 )："<<endl;
 	if (read(cin, total)) {
-		print(cout, total);
-	}
-	if (read(cin, total)) {
 		Sales_data trans;
-		cout << "输入下一个记录： " << endl;
 		while (read(cin, trans)) {
 			if (total.bookNo == trans.bookNo) {
 				total.units_sold += trans.units_sold;//书刊号相同，销售量相加

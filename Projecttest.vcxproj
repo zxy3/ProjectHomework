@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Desktop\VisualStudio2012\7\Sales_data.h" />
     <ClInclude Include="Chapters.h" />
     <ClInclude Include="LocalMath.h" />
+    <ClInclude Include="Sales_data.h" />
     <ClInclude Include="Sales_data_zxy.h" />
     <ClInclude Include="Sales_item.h" />
     <ClInclude Include="Version_test.h" />

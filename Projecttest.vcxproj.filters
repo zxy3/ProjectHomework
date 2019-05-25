@@ -30,7 +30,7 @@
     <ClInclude Include="Sales_data_zxy.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Desktop\VisualStudio2012\7\Sales_data.h">
+    <ClInclude Include="Sales_data.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
