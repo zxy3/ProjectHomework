@@ -21,13 +21,16 @@
     <ClInclude Include="Version_test.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Sales_data.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Chapters.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="LocalMath.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sales_data_zxy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Desktop\VisualStudio2012\7\Sales_data.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,33 +41,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test7.1.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test7.2.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test7.3.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test7.4.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test7.5.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test7.6.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test7.7.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test7.8.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test7.9.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test7.10.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
