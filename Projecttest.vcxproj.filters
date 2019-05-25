@@ -27,9 +27,6 @@
     <ClInclude Include="LocalMath.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Sales_data_zxy.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Sales_data.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -40,16 +37,31 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test7.1.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
     <Image Include="..\..\..\Desktop\刷题记录--PAT.png">
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="..\..\..\Desktop\简历.jpg">
       <Filter>资源文件</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test7.5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test7.7.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test7.8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test7.9.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test7.10.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test7.6.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

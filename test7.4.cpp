@@ -10,6 +10,6 @@ using namespace std;
 
 class Person{
 private:
-	string strName; //姓 名
-	string strAddress; // 地 址
+	string strName; //姓名
+	string strAddress; // 地址
 };

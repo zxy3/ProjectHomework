@@ -2,6 +2,7 @@
  * @file	C:\Users\lenovo\Desktop\VisualStudio2012\7\Sales_data.h.
  *
  * Declares the sales data class
+ *  这个题做了将近一个下午，诶.....
  *===============================================================================================**/
 
 #ifndef SALES_DATA_H
@@ -15,6 +16,7 @@
 class Sales_data {
 	friend std::ostream& print(std::ostream&, const Sales_data&);
 	friend std::istream& read(std::istream&, Sales_data&);
+	friend Sales_data add(const Sales_data&, const Sales_data&);
 
 public:
 	
@@ -33,9 +35,15 @@ public:
 		bookNo(s), units_sold(n), revenue(p* n) { }
 	Sales_data(std::istream&);
 
-	// operations on Sales_data objects
+	// isbn 成员
 	std::string isbn() const { return bookNo; }
-	Sales_data& combine(const Sales_data&);
+	//combine 成员
+	Sales_data& combine(const Sales_data& rhs) {
+		units_sold += rhs.units_sold; 
+		revenue += rhs.revenue;
+		return *this; 
+	}
+	//均价
 	double avg_price() const;
 //private:
 	std::string bookNo;
@@ -61,6 +69,11 @@ std::istream& read(std::istream& in, Sales_data& book) {
 	in >> book.bookNo >>book.units_sold >> book.revenue;
 
 	return in;
+}
+Sales_data add(const Sales_data& lhs, const Sales_data& rhs) {
+	Sales_data sum = lhs; 
+	sum.combine(rhs);
+	return sum;
 }
 
 inline

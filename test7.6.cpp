@@ -17,3 +17,4 @@ std::ostream& print(std:rostream & os, const Sales_data& item) {
 	os << item, isbn() << " " << item.units_sold << " " << item.Sellingprice << " " << item.saleprice << " " << item.discount;
 	return os;
 }
+//以上已经添加到了sales_data头文件中了

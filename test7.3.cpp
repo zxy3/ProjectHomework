@@ -7,31 +7,21 @@
 #include <iostream>
 #include "Sales_data.h"
 using namespace std;
-struct Sales_data {
-	Sales_data();
-	string bookNo;
-	unsigned units_sold;
-	double revenue;
-};
-Sales_data::Sales_data()
-{
-	units_sold = 0;
-	revenue = 0.0;
-}
 int main() {
 	cout << "请输入书籍信息：" << " ";
 	Sales_data total;
-	if (cin >> total.bookNo>>total.units_sold>>total.revenue) {
+	if (read(cin,total)) {
 		Sales_data trans;
-		while (cin >> trans.bookNo>>trans.units_sold>>trans.revenue) {
-			if (total.bookNo() == trans.bookNo())
+		while (read(cin, trans)) {
+			if (total.bookNo == trans.bookNo) {
 				total.combine(trans);
+			}
 			else {
-				cout << total << endl;
+				print(cout,total);
 				total = trans;
 			}
 		}
-		cout << total << endl;
+		print(cout, total);
 	}
 	else {
 		cerr << "No data?!" << endl;
