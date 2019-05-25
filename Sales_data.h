@@ -27,62 +27,47 @@
  * 	Fax: (201) 236-3290
 */ 
 
+/* This file uses list initialization, which is a feature that the
+ * MS compiler may not yet support.  This file (and other source files)
+ * uses preprocessor facilities to conditionally compile code that uses
+ * list initialization or that uses a workaround instead.
+ *
+ * Briefly, conditional compilation uses preprocessor variables
+ * and #ifdef directives (see Section 2.6.3) to decide which code
+ * to compile:
+ *
+ *     #ifdef VARIABLE_NAME
+ *          code1
+ *     #else
+ *          code2
+ *     #endif
+ *
+ * If there is a #define for VARIABLE_NAME then code1 will be compiled
+ * and code2 is skipped.  Otherwise code1 is skipped and code2 is compiled.
+ *
+ * Depending on the version of the compiler that you are running,
+ * the file ..\Version_test.h will either contain a #define for LIST_INIT
+ * or not.  If it does #define LIST_INIT then the code that uses list
+ * initialization will be compiled.  Otherwise, the workaround will be used.
+ *
+ * Section 6.5.3 covers conditional compilation in more detail.
+*/
+
 #ifndef SALES_DATA_H
 #define SALES_DATA_H
 
-//#include "Version_test.h"
+#include "Version_test.h"
 
 #include <string>
-#include <iostream>
 
-class Sales_data {
-friend Sales_data add(const Sales_data&, const Sales_data&);
-friend std::ostream &print(std::ostream&, const Sales_data&);
-friend std::istream &read(std::istream&, Sales_data&);
-public:
-	// constructors
-// using the synthesized version is safe only
-// if we can also use in-class initializers
-#if defined(IN_CLASS_INITS) && defined(DEFAULT_FCNS)
-	Sales_data() = default;
-#else
-	Sales_data(): units_sold(0), revenue(0.0) { }
-#endif
-#ifdef IN_CLASS_INITS
-	Sales_data(const std::string &s): bookNo(s) { }
-#else
-	Sales_data(const std::string &s): 
-	           bookNo(s), units_sold(0), revenue(0.0) { }
-#endif
-	Sales_data(const std::string &s, unsigned n, double p):
-	           bookNo(s), units_sold(n), revenue(p*n) { }
-	Sales_data(std::istream &);
-
-	// operations on Sales_data objects
-	std::string isbn() const { return bookNo; }
-	Sales_data& combine(const Sales_data&);
-	double avg_price() const;
-private:
+struct Sales_data {
 	std::string bookNo;
-#ifdef IN_CLASS_INITS   // using the synthesized version is safe only
+#ifdef IN_CLASS_INITS
 	unsigned units_sold = 0;
 	double revenue = 0.0;
 #else
-	unsigned units_sold;
+	unsigned units_sold;  
 	double revenue;
 #endif
 };
-
-
-// nonmember Sales_data interface functions
-Sales_data add(const Sales_data&, const Sales_data&);
-std::ostream &print(std::ostream&, const Sales_data&);
-std::istream &read(std::istream&, Sales_data&);
-
-// used in future chapters
-inline 
-bool compareIsbn(const Sales_data &lhs, const Sales_data &rhs)
-{
-	return lhs.isbn() < rhs.isbn();
-}
 #endif

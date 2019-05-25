@@ -43,6 +43,27 @@
     <ClCompile Include="test7.1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="test7.2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test7.3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test7.4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test7.5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test7.6.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test7.7.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test7.8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\Desktop\刷题记录--PAT.png">

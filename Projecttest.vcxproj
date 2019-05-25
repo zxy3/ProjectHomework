@@ -31,6 +31,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test7.1.cpp" />
+    <ClCompile Include="test7.2.cpp" />
+    <ClCompile Include="test7.3.cpp" />
+    <ClCompile Include="test7.4.cpp" />
+    <ClCompile Include="test7.5.cpp" />
+    <ClCompile Include="test7.6.cpp" />
+    <ClCompile Include="test7.7.cpp" />
+    <ClCompile Include="test7.8.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\Desktop\刷题记录--PAT.png" />
